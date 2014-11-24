@@ -56,7 +56,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
 # CAS Authenticatoin
-gem 'rubycas-client-rails'
+gem "rubycas-client-rails", :git => "git://github.com/rubycas/rubycas-client-rails.git"
 
 # Puma Server
 gem 'puma'
