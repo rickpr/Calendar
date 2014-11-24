@@ -1,13 +1,17 @@
-## Demo App for [Full Calendar Rails Engine](https://github.com/vinsol/fullcalendar-rails-engine)
+# Fdisks' Calendar app
+Forked from
+[Vinsol](https://github.com/vinsol/fullcalendar-rails-engine-demo-app/) All
+credit is his for creating this wonderful engine and stacking up a sample app
+for it. His work is MIT licensed.
 
-### Steps to use this app:
+### Primary use
+This will be primarily used for UNM Tenure and Promotion Application, as well as
+CAPS calendar
 
-* Clone this app
-* run `bundle` command
-* run `rake db:create` command
-* run `rake db:migrate` command
-* run `rails s` command
-
-The application is up and running. Migrate to `/calendar` path to see the working of the full calendar rails engine gem.
-
-If you are starting from scratch then make sure that you are using Rails 4 and then follow the instructions given on homepage of **Full Calendar Rails Engine** gem.
+### Features
+I intend to have, in the final version, the following features:
+- Private Calendar
+- Public Calendar
+- UNM CAS Authentication
+- Identification by UNM CAS session
+- Simple WebDAV integration
