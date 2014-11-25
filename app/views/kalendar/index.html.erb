@@ -1,7 +1,9 @@
-<h2>Calendar embedded in custome view, other then mount path</h2>
+<h2>Public Calendar</h2>
 
 
-
+  <p>
+    <btn id="eventbtn" class="btn btn-warning">Create Event</btn>
+  </p>
   <div>
     <div class="calendar"></div>
   </div>
@@ -10,4 +12,9 @@
 
   <script type="text/javascript">
     $('.calendar').fullCalendar(full_calendar_options);
+    $('#eventbtn').click(function(event) {
+        FullcalendarEngine.Form.display()
+        event.preventDefault();
+      });
+
   </script>

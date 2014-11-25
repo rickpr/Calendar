@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resource 'home'
   get '/kalendar' => 'kalendar#index', as: :kalendar
+  get '/logout' => 'home#logout'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

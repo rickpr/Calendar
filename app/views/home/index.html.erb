@@ -1,9 +1,20 @@
-<h2>Fullcalendar engine demo app</h2>
-<ul>
-  <li>
-    <%=link_to 'Here', fullcalendar_engine_path %> is the calendar on the mount path.
-  </li>
-   <li>
-    <%=link_to 'Here', kalendar_path %> is the calendar on a custom page(Other than mount path)
-  </li> 
-</ul>
+<h3><b>Welcome to UNM's Calendar Application</b></h2>
+<p><h3>Designed to assist in storing and sharing important calendar dates</h3></p>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4>Test environment Application Statement:</h4>
+</div>
+<div class="panel-body">
+<p>This calendar application is in a testing environment. Please do not put any
+confidential information into this application, nor rely on any persistence the
+data may have</p>
+<p>Please report any problems to:<br>
+Ricardo Piro-Rael<br>
+Academic Affairs Application Developer<br>
+Email: <%= link_to "fdisk122@unm.edu", "mailto:fdisk122@unm.edu" %><br>
+Phone: (505) 200-1555</p>
+</div>
+</div>
+<div class="navbar btn-toolbar">
+<%= link_to "Accept", kalendar_path, :class => "btn btn-success" %><%= link_to "Reject", logout_path, :class => "btn btn-danger" %>
+</div>
