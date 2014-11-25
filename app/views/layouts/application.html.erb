@@ -50,8 +50,7 @@
            <li class="navbar-brand">UNM Calendar</li>
            <li><%= image_tag("unm.jpg") %></li>
             <li class="navbar-brand">You are logged in as <%= session[:cas_user] %> from UNM CAS</li>
-            <li><%=link_to 'Posts', main_app.posts_path %></li>
-            <li><%=link_to 'Calendar', main_app.kalendar_path %></li>
+            <li><%=link_to 'Calendar', cal_path %></li>
 
             <li><%= link_to "Log out", "/logout" %></li>
           </ul>
