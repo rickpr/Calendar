@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517165707) do
+ActiveRecord::Schema.define(version: 20141203213339) do
 
   create_table "fullcalendar_engine_event_series", force: true do |t|
     t.integer  "frequency",  default: 1
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140517165707) do
     t.boolean  "all_day",    default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "private"
   end
 
   create_table "fullcalendar_engine_events", force: true do |t|
@@ -32,13 +33,15 @@ ActiveRecord::Schema.define(version: 20140517165707) do
     t.integer  "event_series_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "private"
   end
 
   add_index "fullcalendar_engine_events", ["event_series_id"], name: "index_fullcalendar_engine_events_on_event_series_id"
 
-  create_table "posts", force: true do |t|
+  create_table "users", force: true do |t|
+    t.string   "netid"
     t.string   "name"
-    t.text     "description"
+    t.boolean  "private"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

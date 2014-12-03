@@ -46,7 +46,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'fullcalendar_engine'
+gem 'fullcalendar_engine', git: "git://github.com/rickpr/fullcalendar-fdisk", branch: "master"
 
 # LESS for Bootstrap, needs Ruby Racer
 gem 'therubyracer'
@@ -56,7 +56,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
 # CAS Authenticatoin
-gem "rubycas-client-rails", :git => "git://github.com/rubycas/rubycas-client-rails.git"
+gem "rubycas-client-rails", git: "git://github.com/rubycas/rubycas-client-rails.git"
 
 # Puma Server
 gem 'puma'

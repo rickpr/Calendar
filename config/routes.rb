@@ -4,7 +4,7 @@ Rails.application.routes.draw do  mount FullcalendarEngine::Engine => "/calendar
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-  resource 'home'
+  resources :users
   get '/cal' => 'home#cal'
   get '/logout' => 'home#logout'
 
