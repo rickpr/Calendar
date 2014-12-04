@@ -60,3 +60,6 @@ gem "rubycas-client-rails", git: "git://github.com/rubycas/rubycas-client-rails.
 
 # Puma Server
 gem 'puma'
+
+# To export calendar
+gem 'icalendar'

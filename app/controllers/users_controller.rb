@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :adminonly
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -69,6 +70,10 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:netid, :name, :private)
+      params.require(:user).permit(:netid, :name, :private, :admin)
+    end
+
+    def adminonly
+      redirect_to root_path if !(current_user && current_user.admin)
     end
 end

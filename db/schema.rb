@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203213339) do
+ActiveRecord::Schema.define(version: 20141204201850) do
 
   create_table "fullcalendar_engine_event_series", force: true do |t|
     t.integer  "frequency",  default: 1
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20141203213339) do
     t.boolean  "private"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin"
   end
 
 end

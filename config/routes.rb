@@ -7,6 +7,7 @@ Rails.application.routes.draw do  mount FullcalendarEngine::Engine => "/calendar
   resources :users
   get '/cal' => 'home#cal'
   get '/logout' => 'home#logout'
+  get '/sync' => 'sync#download'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

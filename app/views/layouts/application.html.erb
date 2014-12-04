@@ -51,7 +51,9 @@
            <li><%= image_tag("unm.jpg") %></li>
             <li class="navbar-brand">You are logged in as <%= session[:cas_user] %> from UNM CAS</li>
             <li><%=link_to 'Calendar', cal_path %></li>
-
+            <% if current_user && current_user.admin %>
+              <li><%= link_to 'Users', users_path %></li>
+            <% end %>
             <li><%= link_to "Log out", "/logout" %></li>
           </ul>
         </div>
@@ -66,9 +68,13 @@
         </div>
       </div><!--/row-->
 
-      <footer>
-        <p>&copy; UNM 2014</p>
-      </footer>
+      <div class="navbar navbar-fixed-bottom">
+        <div class="container">
+        <ul class="nav navbar-nav">
+        <li>&copy; UNM 2014</li>
+        </ul>
+        </div>
+      </div>
 
     </div> <!-- /container -->
 

@@ -11,9 +11,14 @@
 </p>
 
 <p>
-  <strong>Private:</strong>
-  <%= @user.private %>
+  <strong>Can View Private:</strong>
+  <%= @user.private.yesno %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p>
+  <strong>Admin:</strong>
+  <%= @user.admin.yesno %>
+</p>
+
+<%= link_to 'Edit Again', edit_user_path(@user), class: 'btn btn-danger' %>
+<%= link_to 'Done', users_path, class: 'btn btn-success' %>
